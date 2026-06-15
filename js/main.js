@@ -1,176 +1,140 @@
-/* ============================================
-   FESTIVAL NGONDO — Main JavaScript
-   ============================================ */
+/* Festival Ngondo — Main JS */
 
-// ── Countdown Timer ──────────────────────────────────────────────────────────
+/* ── Countdown ── */
 function initCountdown() {
   const el = document.getElementById('countdown');
   if (!el) return;
-
-  // Festival date: 1st Saturday of December 2026 → Dec 5, 2026
   const target = new Date('2026-12-06T09:00:00').getTime();
-
   function tick() {
-    const now  = Date.now();
-    const diff = target - now;
-
-    if (diff <= 0) {
-      el.innerHTML = '<span class="countdown-name" style="font-size:1.1rem;color:var(--color-gold)">Le Festival est en cours !</span>';
-      return;
-    }
-
-    const days    = Math.floor(diff / 86400000);
-    const hours   = Math.floor((diff % 86400000) / 3600000);
-    const minutes = Math.floor((diff % 3600000)  / 60000);
-    const seconds = Math.floor((diff % 60000)    / 1000);
-
+    const diff = target - Date.now();
+    if (diff <= 0) { el.innerHTML = '<span style="font-size:1rem;font-weight:600;">Le Festival est en cours !</span>'; return; }
+    const pad = (n, l=2) => String(n).padStart(l,'0');
     el.innerHTML = `
-      <div class="countdown-unit"><span class="countdown-num" id="cd-d">${String(days).padStart(3,'0')}</span><span class="countdown-name">Jours / Days</span></div>
+      <div class="countdown-unit"><span class="countdown-num">${pad(Math.floor(diff/86400000),3)}</span><span class="countdown-name">Jours</span></div>
       <span class="countdown-sep">:</span>
-      <div class="countdown-unit"><span class="countdown-num">${String(hours).padStart(2,'0')}</span><span class="countdown-name">Heures / Hours</span></div>
+      <div class="countdown-unit"><span class="countdown-num">${pad(Math.floor((diff%86400000)/3600000))}</span><span class="countdown-name">Heures</span></div>
       <span class="countdown-sep">:</span>
-      <div class="countdown-unit"><span class="countdown-num">${String(minutes).padStart(2,'0')}</span><span class="countdown-name">Minutes</span></div>
+      <div class="countdown-unit"><span class="countdown-num">${pad(Math.floor((diff%3600000)/60000))}</span><span class="countdown-name">Min</span></div>
       <span class="countdown-sep">:</span>
-      <div class="countdown-unit"><span class="countdown-num">${String(seconds).padStart(2,'0')}</span><span class="countdown-name">Secondes / Sec</span></div>
-    `;
+      <div class="countdown-unit"><span class="countdown-num">${pad(Math.floor((diff%60000)/1000))}</span><span class="countdown-name">Sec</span></div>`;
   }
-
   tick();
   setInterval(tick, 1000);
 }
 
-// ── Mobile Nav ────────────────────────────────────────────────────────────────
+/* ── Hamburger Nav ── */
 function initNav() {
-  const hamburger = document.querySelector('.hamburger');
-  const menu      = document.querySelector('.nav-menu');
-  if (!hamburger || !menu) return;
+  // Wait for header injection then bind
+  function bind() {
+    const btn  = document.getElementById('hamburger');
+    const menu = document.getElementById('nav-menu');
+    if (!btn || !menu) return;
 
-  hamburger.addEventListener('click', () => {
-    const open = menu.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-
-    // Animate hamburger → X
-    const spans = hamburger.querySelectorAll('span');
-    if (open) {
-      spans[0].style.transform = 'translateY(7px) rotate(45deg)';
-      spans[1].style.opacity   = '0';
-      spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
-    } else {
-      spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+    function openMenu() {
+      menu.classList.add('open');
+      btn.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
     }
-  });
-
-  // Close on outside click
-  document.addEventListener('click', e => {
-    if (!hamburger.contains(e.target) && !menu.contains(e.target)) {
+    function closeMenu() {
       menu.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
-      hamburger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
     }
-  });
-}
 
-// ── Scroll Reveal ─────────────────────────────────────────────────────────────
-function initReveal() {
-  const els = document.querySelectorAll('.reveal');
-  if (!els.length) return;
-
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        obs.unobserve(e.target);
-      }
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      menu.classList.contains('open') ? closeMenu() : openMenu();
     });
-  }, { threshold: 0.12 });
 
-  els.forEach(el => obs.observe(el));
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (!menu.contains(e.target) && !btn.contains(e.target)) closeMenu();
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+
+    // Close on link click inside menu (mobile)
+    menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        if (window.innerWidth <= 768) closeMenu();
+      });
+    });
+  }
+
+  // Run after header injected (slight delay for DOM)
+  setTimeout(bind, 50);
+  // Also try on DOMContentLoaded
+  document.addEventListener('DOMContentLoaded', bind);
 }
 
-// ── Sticky Header ─────────────────────────────────────────────────────────────
-function initStickyHeader() {
-  const header = document.querySelector('.site-header');
-  if (!header) return;
+/* ── Scroll Reveal ── */
+function initReveal() {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+}
 
+/* ── Sticky header shadow ── */
+function initStickyHeader() {
+  const h = document.querySelector('.site-header');
+  if (!h) return;
   window.addEventListener('scroll', () => {
-    header.style.background = window.scrollY > 60
-      ? 'rgba(10,13,15,0.98)'
-      : 'rgba(10,13,15,0.96)';
+    h.style.boxShadow = window.scrollY > 40 ? '0 2px 20px rgba(26,74,140,0.12)' : '0 1px 12px rgba(26,74,140,0.06)';
   }, { passive: true });
 }
 
-// ── Programme Filters ─────────────────────────────────────────────────────────
+/* ── Programme filters ── */
 function initFilters() {
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const cards      = document.querySelectorAll('[data-category]');
-  if (!filterBtns.length) return;
-
-  filterBtns.forEach(btn => {
+  const btns  = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('[data-category]');
+  if (!btns.length) return;
+  btns.forEach(btn => {
     btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
+      btns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-
       const cat = btn.dataset.filter;
-      cards.forEach(card => {
-        const show = cat === 'all' || card.dataset.category === cat;
-        card.style.display = show ? '' : 'none';
-      });
+      cards.forEach(c => { c.style.display = (cat === 'all' || c.dataset.category === cat) ? '' : 'none'; });
     });
   });
 }
 
-// ── Newsletter ─────────────────────────────────────────────────────────────────
+/* ── Newsletter ── */
 function initNewsletter() {
   const form = document.querySelector('.newsletter-form');
   if (!form) return;
-
   form.addEventListener('submit', e => {
     e.preventDefault();
     const input = form.querySelector('input');
     const btn   = form.querySelector('button');
     if (!input.value.includes('@')) return;
     btn.textContent = '✓ Inscrit !';
-    btn.style.background = 'var(--color-green-light)';
+    btn.style.background = '#1e6b45';
     input.value = '';
-    setTimeout(() => {
-      btn.textContent = 'S\'inscrire';
-      btn.style.background = '';
-    }, 3000);
+    setTimeout(() => { btn.textContent = "S'inscrire"; btn.style.background = ''; }, 3500);
   });
 }
 
-// ── Active Nav Link ───────────────────────────────────────────────────────────
-function setActiveNav() {
-  const path = window.location.pathname;
-  document.querySelectorAll('.nav-link').forEach(link => {
-    if (link.getAttribute('href') === path || link.getAttribute('href') === path.split('/').pop()) {
-      link.classList.add('active');
-    }
-  });
-}
-
-// ── Smooth CTA scroll ────────────────────────────────────────────────────────
+/* ── Smooth scroll ── */
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
   });
 }
 
-// ── Init ──────────────────────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
-  initCountdown();
-  initNav();
-  initReveal();
-  initStickyHeader();
-  initFilters();
-  initNewsletter();
-  setActiveNav();
-  initSmoothScroll();
-});
+/* ── Init all ── */
+initCountdown();
+initNav();
+initStickyHeader();
+initFilters();
+initNewsletter();
+initSmoothScroll();
+document.addEventListener('DOMContentLoaded', () => { initReveal(); });
