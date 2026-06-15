@@ -2,11 +2,11 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#050c12">
   <title>Accueil | Festival Traditionnel Ngondo — Douala, Cameroun</title>
-  <meta name="description" content="Le Ngondo est la plus grande fête rituelle et culturelle des peuples Sawa du Cameroun. Patrimoine Culturel Immatériel de l'UNESCO. Édition 2026 : 4 au 7 décembre à Douala.">
+  <meta name="description" content="Le Ngondo est la plus grande fête rituelle et culturelle des peuples Sawa du Cameroun. Patrimoine UNESCO. Édition 2026 : 4 au 7 décembre à Douala.">
   <meta property="og:title" content="Festival Traditionnel Ngondo — Douala, Cameroun">
-  <meta property="og:description" content="Fête séculaire des peuples Sawa, inscrite au Patrimoine Culturel Immatériel de l'UNESCO. Berges du Wouri, Douala.">
   <meta property="og:image" content="../../images/pirogues-wouri.jpg">
   <link rel="canonical" href="https://www.ngondo.cm/fr/">
   <link rel="stylesheet" href="../../css/style.css">
@@ -16,79 +16,28 @@
 
 <div id="site-header"></div>
 
-<!-- ════════════════════════ HERO ════════════════════════ -->
-<section class="hero" aria-label="Festival du Ngondo 2026">
-  <div class="hero-bg-img"></div>
-  <div class="hero-overlay"></div>
+<!-- ══════════════ HERO SLIDER ══════════════ -->
+<section class="hero" id="hero" aria-label="Festival du Ngondo 2026"></section>
 
-  <div class="container hero-content">
-    <div class="hero-badge fade-up">
-      <span></span>
-      Édition 2026 · 4 au 7 Décembre · Douala
-    </div>
-
-    <div class="unesco-badge fade-up delay-1">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18L20 8.5v7L12 19.82 4 15.5v-7l8-4.32z"/></svg>
-      Patrimoine Culturel Immatériel de l'UNESCO
-    </div>
-
-    <h1 class="hero-title fade-up delay-1">
-      NGONDO
-      <span class="hero-title-sub">Fête des Peuples Sawa</span>
-    </h1>
-    <p class="hero-desc fade-up delay-2">
-      Célébré chaque année sur les berges du fleuve Wouri à Douala, le Ngondo matérialise l'unité des peuples Sawa et scelle le lien sacré entre les vivants, les ancêtres et les divinités aquatiques.
-    </p>
-    <div class="hero-cta fade-up delay-3">
-      <a href="programmation.html" class="btn btn-gold">Voir le programme 2026</a>
-      <a href="apropos.html" class="btn btn-outline">Découvrir le Ngondo</a>
-    </div>
-    <div class="hero-stats fade-up delay-4">
-      <div>
-        <div class="hero-stat-val">Déc. 6</div>
-        <div class="hero-stat-label">Apothéose 2026</div>
-      </div>
-      <div>
-        <div class="hero-stat-val">Wouri</div>
-        <div class="hero-stat-label">Fleuve sacré</div>
-      </div>
-      <div>
-        <div class="hero-stat-val">100+</div>
-        <div class="hero-stat-label">Ans de tradition</div>
-      </div>
-      <div>
-        <div class="hero-stat-val">UNESCO</div>
-        <div class="hero-stat-label">Patrimoine mondial</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════ COUNTDOWN ════════════════════ -->
+<!-- ══════════════ COUNTDOWN ══════════════ -->
 <div class="countdown-bar">
   <div class="container">
     <div class="countdown-inner">
       <p class="countdown-label">Ngondo 2026 — Apothéose : Dimanche 6 Décembre</p>
       <div class="countdown-timer" id="countdown" aria-live="polite">Chargement…</div>
-      <a href="billetterie.html" class="btn btn-gold" style="font-size:0.68rem;padding:0.5rem 1.25rem;">Billets & Accès</a>
+      <a href="billetterie.html" class="btn btn-gold" style="font-size:0.68rem;padding:0.5rem 1.1rem;white-space:nowrap;">Billets & Accès</a>
     </div>
   </div>
 </div>
 
-<!-- ════════════════ GALERIE PHOTOS ════════════════ -->
+<!-- ══════════════ GALERIE ══════════════ -->
 <div class="gallery-strip" aria-label="Galerie photos du Festival Ngondo">
-  <div class="gallery-item">
-    <img src="../../images/pirogues-wouri.jpg" alt="Grande course de pirogues sur le Wouri" loading="lazy">
-  </div>
-  <div class="gallery-item">
-    <img src="../../images/danses-traditionnelles.jpg" alt="Danses traditionnelles Sawa au Ngondo" loading="lazy">
-  </div>
-  <div class="gallery-item">
-    <img src="../../images/ceremonie-jengu.jpg" alt="Cérémonie Jengu — rituel de l'eau" loading="lazy">
-  </div>
+  <div class="gallery-item"><img src="../../images/pirogues-wouri.jpg" alt="Course de pirogues sur le Wouri" loading="lazy"></div>
+  <div class="gallery-item"><img src="../../images/danses-traditionnelles.jpg" alt="Danses traditionnelles Sawa" loading="lazy"></div>
+  <div class="gallery-item"><img src="../../images/ceremonie-jengu.jpg" alt="Cérémonie Jengu" loading="lazy"></div>
 </div>
 
-<!-- ════════════════════ AGENDA 2026 ════════════════════ -->
+<!-- ══════════════ AGENDA 2026 ══════════════ -->
 <section class="section" id="agenda" aria-labelledby="agenda-title">
   <div class="container">
     <div class="reveal">
@@ -96,92 +45,74 @@
       <h2 class="section-title" id="agenda-title">Programme du Ngondo 2026</h2>
       <div class="divider"></div>
       <p style="color:var(--color-muted);max-width:580px;font-size:0.93rem;margin-bottom:0;">
-        Placée sous le thème de l'anticipation et de la vigilance, l'édition 2026 se déroule de septembre à décembre, avec pour apothéose le rassemblement sur les berges du Wouri le dimanche 6 décembre.
+        Thème 2026 : <strong style="color:var(--color-text);">L'Anticipation et la Vigilance.</strong><br>
+        De septembre à décembre — caravanes cantonales, veillées, finales et grande apothéose sur les berges du Wouri le 6 décembre.
       </p>
     </div>
+    <div class="agenda-timeline reveal" role="list">
 
-    <div class="agenda-timeline" role="list" aria-label="Calendrier du festival">
-
-      <div class="agenda-phase reveal" role="listitem">
+      <div class="agenda-phase" role="listitem">
         <div class="agenda-date">Sept. – Nov.<small>2026</small></div>
         <div class="agenda-content">
           <div class="agenda-event">Caravanes Culturelles dans les Cantons</div>
-          <p class="agenda-desc">Déploiement des foires itinérantes dans les cantons Sawa (Deido, Akwa, Bell…). Mise en valeur de l'art culinaire, des musiques patrimoniales Ngos et Bolobo, et de l'artisanat local. Éliminatoires de lutte et présélections Miss Ngondo.</p>
-          <div class="agenda-tags">
-            <span class="tag free">Accès libre</span>
-            <span class="tag">Cantons</span>
-            <span class="tag">Caravanes</span>
-          </div>
+          <p class="agenda-desc">Foires itinérantes dans les cantons Sawa (Deido, Akwa, Bell…). Art culinaire (Ndolé), musiques Ngos & Bolobo, artisanat. Éliminatoires de lutte et présélections Miss Ngondo.</p>
+          <div class="agenda-tags"><span class="tag free">Accès libre</span><span class="tag">Cantons</span><span class="tag">Caravanes</span></div>
         </div>
       </div>
 
-      <div class="agenda-phase reveal" role="listitem">
-        <div class="agenda-date">4–5 Déc.<small>2026 · Veillées</small></div>
+      <div class="agenda-phase" role="listitem">
+        <div class="agenda-date">4–5 Déc.<small>Veillées</small></div>
         <div class="agenda-content">
           <div class="agenda-event">Grandes Veillées Culturelles & Finales</div>
-          <p class="agenda-desc">Finales des compétitions de lutte traditionnelle Sawa. Élection de la Miss Ngondo 2026 — concours de beauté, d'éloquence et de maîtrise de la culture Sawa. Grandes soirées culturelles avec concerts et cérémonies.</p>
-          <div class="agenda-tags">
-            <span class="tag">Lutte Sawa</span>
-            <span class="tag">Miss Ngondo</span>
-            <span class="tag">Veillées</span>
-          </div>
+          <p class="agenda-desc">Finales lutte traditionnelle Sawa. Élection Miss Ngondo 2026 — beauté, éloquence et maîtrise de la culture Sawa. Grandes soirées culturelles avec concerts et cérémonies.</p>
+          <div class="agenda-tags"><span class="tag">Lutte Sawa</span><span class="tag">Miss Ngondo</span><span class="tag">Soirées</span></div>
         </div>
       </div>
 
-      <div class="agenda-phase highlight reveal" role="listitem">
-        <div class="agenda-date">6 Déc.<small>2026 · Apothéose</small></div>
+      <div class="agenda-phase highlight" role="listitem">
+        <div class="agenda-date">6 Déc.<small>APOTHÉOSE</small></div>
         <div class="agenda-content">
           <div class="agenda-event">⚡ Apothéose sur les Berges du Wouri</div>
-          <p class="agenda-desc">Le grand rassemblement du peuple Sawa. Rituel sacré de l'eau — un plongeur initié remonte un vase sacré des profondeurs du Wouri portant les messages des ancêtres, lus publiquement en langue Duala. Grande course de pirogues géantes. Assemblée des Chefs Supérieurs de tous les cantons Sawa.</p>
-          <div class="agenda-tags">
-            <span class="tag apothéose">APOTHÉOSE</span>
-            <span class="tag mystique">Rituel de l'eau</span>
-            <span class="tag">Course de pirogues</span>
-            <span class="tag free">Accès libre</span>
-          </div>
+          <p class="agenda-desc">Rituel sacré — plongeur initié remontant le vase des ancêtres depuis le Wouri. Messages lus en langue Duala. Grande course de pirogues géantes. Assemblée des Chefs Supérieurs.</p>
+          <div class="agenda-tags"><span class="tag apothéose">APOTHÉOSE</span><span class="tag myst">Rituel de l'eau</span><span class="tag">Pirogues</span><span class="tag free">Accès libre</span></div>
         </div>
       </div>
 
     </div>
-
-    <div class="reveal" style="margin-top:2.5rem;">
+    <div class="reveal" style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
       <a href="programmation.html" class="btn btn-gold">Programme complet 2026</a>
-      <a href="billetterie.html" class="btn btn-outline" style="margin-left:1rem;">Accès & Billetterie</a>
+      <a href="billetterie.html" class="btn btn-outline">Accès & Billetterie</a>
     </div>
   </div>
 </section>
 
-<!-- ════════════════ RITUELS SACRÉS ════════════════ -->
-<section class="section" style="background:var(--color-surface);border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border);" aria-labelledby="rituels-title">
+<!-- ══════════════ RITUELS ══════════════ -->
+<section class="section outdoor-section" aria-labelledby="rituels-title">
   <div class="container">
     <div class="reveal">
       <span class="section-label">Dimension mystique</span>
       <h2 class="section-title" id="rituels-title">Les Rituels Majeurs du Ngondo</h2>
       <div class="divider"></div>
     </div>
-    <div class="rituels-grid" aria-label="Les rituels du Ngondo">
-
-      <div class="rituel-card reveal">
+    <div class="rituels-grid reveal">
+      <div class="rituel-card">
         <div class="rituel-icon">🌊</div>
-        <h3 class="rituel-name">Le Culte des Oracles de l'Eau</h3>
-        <p class="rituel-desc">Cœur mystique du festival. Un plongeur initié s'immerge en apnée au fond du fleuve Wouri pour y rencontrer les esprits Mami Wata et remonter un vase sacré. Les messages des ancêtres sont décryptés et lus publiquement en langue Duala.</p>
-        <span class="tag mystique">Rituel central</span>
+        <h3 class="rituel-name">Culte des Oracles de l'Eau</h3>
+        <p class="rituel-desc">Plongeur initié remontant un vase sacré des profondeurs du Wouri — messages des ancêtres lus en langue Duala.</p>
+        <span class="tag myst" style="margin-top:auto;">Rituel central</span>
       </div>
-
-      <div class="rituel-card reveal">
+      <div class="rituel-card">
         <div class="rituel-icon">🏛️</div>
-        <h3 class="rituel-name">L'Assemblée de la Case Sacrée</h3>
-        <p class="rituel-desc">Réunion à huis clos des Chefs Supérieurs de tous les cantons Sawa pour invoquer la paix sociale, la solidarité inter-cantonale et bénir les offrandes destinées aux divinités aquatiques.</p>
-        <span class="tag mystique">Chefs Sawa</span>
+        <h3 class="rituel-name">Assemblée de la Case Sacrée</h3>
+        <p class="rituel-desc">Réunion à huis clos des Chefs Supérieurs de tous les cantons Sawa pour invoquer la paix et bénir les offrandes.</p>
+        <span class="tag myst" style="margin-top:auto;">Chefs Sawa</span>
       </div>
-
-      <div class="rituel-card reveal">
+      <div class="rituel-card">
         <div class="rituel-icon">🌿</div>
-        <h3 class="rituel-name">Le Bain de Purification</h3>
-        <p class="rituel-desc">Rituel de protection mystique utilisant des écorces sacrées et des eaux rituelles pour purifier les athlètes, les dignitaires et les pagayeurs avant les épreuves sportives et les cérémonies.</p>
-        <span class="tag mystique">Protection</span>
+        <h3 class="rituel-name">Bain de Purification</h3>
+        <p class="rituel-desc">Rituel d'écorces sacrées pour purifier athlètes, dignitaires et pagayeurs avant les épreuves et cérémonies.</p>
+        <span class="tag myst" style="margin-top:auto;">Protection</span>
       </div>
-
     </div>
     <div class="reveal" style="margin-top:2rem;">
       <a href="rituels.html" class="btn btn-outline">En savoir plus sur les rituels</a>
@@ -189,9 +120,9 @@
   </div>
 </section>
 
-<!-- ════════════════ PHOTO + PIROGUES ════════════════ -->
-<section class="section" style="padding:0;" aria-label="La course de pirogues">
-  <div class="photo-split">
+<!-- ══════════════ SPLIT — PIROGUES ══════════════ -->
+<section class="section" style="padding:0;" aria-label="Course de pirogues">
+  <div class="photo-split reveal">
     <div class="photo-split-img">
       <img src="../../images/pirogues-wouri.jpg" alt="Course de pirogues géantes sur le fleuve Wouri lors du Ngondo" loading="lazy">
     </div>
@@ -199,14 +130,14 @@
       <span class="section-label">Tradition Sawa</span>
       <h2 class="section-title">La Grande Course de Pirogues</h2>
       <div class="divider"></div>
-      <p>Spectaculaire épreuve d'endurance et de vitesse sur le fleuve Wouri, la course de pirogues oppose des embarcations géantes sculptées à la main, manœuvrées par des dizaines de pagayeurs au rythme des tambours.</p>
-      <p>Chaque canton Sawa engage son équipe dans cette compétition qui est bien plus qu'un sport : c'est une affirmation d'identité, de force collective et de lien avec le fleuve sacré.</p>
-      <a href="pirogue.html" class="btn btn-outline" style="margin-top:0.5rem;">Découvrir la course</a>
+      <p>Spectaculaire épreuve d'endurance et de vitesse sur le Wouri — pirogues géantes sculptées à la main, manœuvrées par des dizaines de pagayeurs au rythme des tambours.</p>
+      <p>Chaque canton Sawa engage son équipe dans cette compétition qui est bien plus qu'un sport : une affirmation d'identité et de lien avec le fleuve sacré.</p>
+      <a href="pirogue.html" class="btn btn-outline" style="margin-top:0.75rem;">Découvrir la course</a>
     </div>
   </div>
 </section>
 
-<!-- ════════════════ ACTIVITÉS POPULAIRES ════════════════ -->
+<!-- ══════════════ ACTIVITÉS ══════════════ -->
 <section class="section" aria-labelledby="activites-title">
   <div class="container">
     <div class="reveal">
@@ -214,117 +145,66 @@
       <h2 class="section-title" id="activites-title">Les Activités du Festival</h2>
       <div class="divider"></div>
     </div>
-    <div class="activites-grid" aria-label="Activités du Ngondo">
-      <div class="activite-card reveal">
-        <div class="activite-icon">🛶</div>
-        <h3>Course de Pirogues</h3>
-        <p>Épreuve phare : pirogues géantes sur le Wouri, au rythme des tambours</p>
-      </div>
-      <div class="activite-card reveal">
-        <div class="activite-icon">🤼</div>
-        <h3>Lutte Traditionnelle Sawa</h3>
-        <p>Compétition de force entre les meilleurs lutteurs des cantons</p>
-      </div>
-      <div class="activite-card reveal">
-        <div class="activite-icon">👑</div>
-        <h3>Élection Miss Ngondo</h3>
-        <p>Concours de beauté, d'éloquence et de maîtrise de la culture Sawa</p>
-      </div>
-      <div class="activite-card reveal">
-        <div class="activite-icon">🍲</div>
-        <h3>Caravanes Culinaires</h3>
-        <p>Foires itinérantes : Ndolé, plats Sawa et gastronomie locale</p>
-      </div>
-      <div class="activite-card reveal">
-        <div class="activite-icon">🎵</div>
-        <h3>Musiques Patrimoniales</h3>
-        <p>Ngos, Bolobo et chants traditionnels dans chaque canton</p>
-      </div>
-      <div class="activite-card reveal">
-        <div class="activite-icon">🎨</div>
-        <h3>Artisanat Sawa</h3>
-        <p>Créations locales, sculptures et objets culturels du peuple Sawa</p>
-      </div>
+    <div class="activites-grid reveal">
+      <div class="activite-card"><div class="activite-icon">🛶</div><h3>Course de Pirogues</h3><p>Épreuve phare sur le Wouri au rythme des tambours</p></div>
+      <div class="activite-card"><div class="activite-icon">🤼</div><h3>Lutte Traditionnelle</h3><p>Compétition de force entre les cantons Sawa</p></div>
+      <div class="activite-card"><div class="activite-icon">👑</div><h3>Élection Miss Ngondo</h3><p>Beauté, éloquence et maîtrise de la culture Sawa</p></div>
+      <div class="activite-card"><div class="activite-icon">🍲</div><h3>Caravanes Culinaires</h3><p>Ndolé, plats Sawa et gastronomie locale</p></div>
+      <div class="activite-card"><div class="activite-icon">🎵</div><h3>Musiques Patrimoniales</h3><p>Ngos, Bolobo et chants traditionnels</p></div>
+      <div class="activite-card"><div class="activite-icon">🎨</div><h3>Artisanat Sawa</h3><p>Créations, sculptures et objets culturels</p></div>
     </div>
   </div>
 </section>
 
-<!-- ════════════ PHOTO DANSES ════════════ -->
+<!-- ══════════════ SPLIT — DANSES ══════════════ -->
 <section class="section" style="padding:0;" aria-label="Danses traditionnelles">
-  <div class="photo-split">
+  <div class="photo-split reveal">
     <div class="photo-split-content">
       <span class="section-label">Patrimoine vivant</span>
       <h2 class="section-title">Danses & Tenues Traditionnelles</h2>
       <div class="divider"></div>
-      <p>Le Ngondo est un espace vivant de transmission culturelle. Les danses traditionnelles Sawa — Esséwè, Ngos, Bolobo — sont interprétées dans leurs costumes d'apparat, faisant du festival un musée vivant du patrimoine Sawa.</p>
-      <p>Les caravanes itinérantes de septembre à novembre permettent aux jeunes des différents cantons d'apprendre et de pratiquer ces danses, perpétuant ainsi un héritage millénaire.</p>
-      <a href="danses.html" class="btn btn-outline" style="margin-top:0.5rem;">Voir les danses traditionnelles</a>
+      <p>Les danses Esséwè, Ngos et Bolobo interprétées dans leurs costumes d'apparat font du Ngondo un musée vivant du patrimoine Sawa.</p>
+      <p>Les caravanes de sept. à nov. permettent aux jeunes de chaque canton d'apprendre et perpétuer cet héritage millénaire.</p>
+      <a href="danses.html" class="btn btn-outline" style="margin-top:0.75rem;">Voir les danses traditionnelles</a>
     </div>
     <div class="photo-split-img">
-      <img src="../../images/danses-traditionnelles.jpg" alt="Danses traditionnelles Sawa au Festival Ngondo — tenues d'apparat" loading="lazy">
+      <img src="../../images/danses-traditionnelles.jpg" alt="Danses traditionnelles Sawa au Festival Ngondo" loading="lazy">
     </div>
   </div>
 </section>
 
-<!-- ════════════════ STATS BAND ════════════════ -->
-<div class="stats-band" aria-label="Chiffres clés du Ngondo">
+<!-- ══════════════ STATS ══════════════ -->
+<div class="stats-band reveal" aria-label="Chiffres clés">
   <div class="container">
     <div class="stats-inner">
-      <div class="stat-block reveal">
-        <div class="stat-val">100+</div>
-        <div class="stat-label">Ans de tradition</div>
-      </div>
-      <div class="stat-block reveal">
-        <div class="stat-val">50 000+</div>
-        <div class="stat-label">Participants attendus</div>
-      </div>
-      <div class="stat-block reveal">
-        <div class="stat-val">8+</div>
-        <div class="stat-label">Cantons Sawa</div>
-      </div>
-      <div class="stat-block reveal">
-        <div class="stat-val">UNESCO</div>
-        <div class="stat-label">Patrimoine mondial</div>
-      </div>
+      <div class="stat-block"><div class="stat-val">100+</div><div class="stat-label">Ans de tradition</div></div>
+      <div class="stat-block"><div class="stat-val">50 000+</div><div class="stat-label">Participants</div></div>
+      <div class="stat-block"><div class="stat-val">8+</div><div class="stat-label">Cantons Sawa</div></div>
+      <div class="stat-block"><div class="stat-val">UNESCO</div><div class="stat-label">Patrimoine mondial</div></div>
     </div>
   </div>
 </div>
 
-<!-- ════════════════ HÉBERGEMENT ════════════════ -->
+<!-- ══════════════ HÉBERGEMENT ══════════════ -->
 <section class="section" aria-labelledby="hotel-title">
   <div class="container">
     <div class="reveal">
       <span class="section-label">Préparez votre venue</span>
       <h2 class="section-title" id="hotel-title">Hébergement recommandé</h2>
       <div class="divider"></div>
-      <p style="color:var(--color-muted);max-width:560px;font-size:0.93rem;margin-bottom:0;">
-        En raison de l'affluence internationale, il est conseillé de réserver votre hébergement dès septembre 2026, dans les quartiers sécurisés de <strong style="color:var(--color-text);">Bonanjo</strong> ou <strong style="color:var(--color-text);">Akwa</strong> à Douala.
+      <p style="color:var(--color-muted);max-width:560px;font-size:0.93rem;">
+        En raison de l'affluence internationale, réservez dès <strong style="color:var(--color-text);">septembre 2026</strong> dans les quartiers de <strong style="color:var(--color-text);">Bonanjo</strong> ou <strong style="color:var(--color-text);">Akwa</strong> à Douala.
       </p>
     </div>
     <div class="hotels-grid reveal">
-      <div class="hotel-card">
-        <div class="hotel-quartier">Bonanjo</div>
-        <div class="hotel-name">K Hotel</div>
-        <p class="hotel-note">Établissement haut de gamme en centre-ville, à proximité des berges du Wouri.</p>
-      </div>
-      <div class="hotel-card">
-        <div class="hotel-quartier">Akwa</div>
-        <div class="hotel-name">ONOMO Hotel Douala</div>
-        <p class="hotel-note">Hôtel moderne bien situé dans le quartier animé d'Akwa, accès facile au site du festival.</p>
-      </div>
-      <div class="hotel-card">
-        <div class="hotel-quartier">Bonanjo</div>
-        <div class="hotel-name">Platinum Cocotiers</div>
-        <p class="hotel-note">Résidence de standing dans le quartier diplomatique, idéal pour un séjour serein.</p>
-      </div>
-    </div>
-    <div class="reveal" style="margin-top:1.75rem;">
-      <a href="hebergement.html" class="btn btn-outline">Toutes les options d'hébergement</a>
+      <div class="hotel-card"><div class="hotel-quartier">Bonanjo</div><div class="hotel-name">K Hotel</div><p class="hotel-note">Établissement haut de gamme en centre-ville, à proximité des berges du Wouri.</p></div>
+      <div class="hotel-card"><div class="hotel-quartier">Akwa</div><div class="hotel-name">ONOMO Hotel Douala</div><p class="hotel-note">Hôtel moderne bien situé dans le quartier animé d'Akwa, accès facile au site du festival.</p></div>
+      <div class="hotel-card"><div class="hotel-quartier">Bonanjo</div><div class="hotel-name">Platinum Cocotiers</div><p class="hotel-note">Résidence de standing dans le quartier diplomatique, idéal pour un séjour serein.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ════════════════ NEWSLETTER ════════════════ -->
+<!-- ══════════════ NEWSLETTER ══════════════ -->
 <section class="section newsletter" aria-labelledby="nl-title">
   <div class="container">
     <div class="newsletter-inner reveal">
@@ -347,5 +227,6 @@
 <script>document.documentElement.lang = 'fr';</script>
 <script src="../../js/components.js"></script>
 <script src="../../js/main.js"></script>
+<script src="../../js/slider.js"></script>
 </body>
 </html>
