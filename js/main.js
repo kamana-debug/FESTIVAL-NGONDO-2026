@@ -1,4 +1,4 @@
-/* Festival Ngondo — Main JS */
+/* NGONDO — Main JS */
 
 /* ── Countdown ── */
 function initCountdown() {
@@ -7,7 +7,7 @@ function initCountdown() {
   const target = new Date('2026-12-06T09:00:00').getTime();
   function tick() {
     const diff = target - Date.now();
-    if (diff <= 0) { el.innerHTML = '<span style="font-size:1rem;font-weight:600;">Le Festival est en cours !</span>'; return; }
+    if (diff <= 0) { el.innerHTML = '<span style="font-size:1rem;font-weight:600;">Le NGONDO est en cours !</span>'; return; }
     const pad = (n, l=2) => String(n).padStart(l,'0');
     el.innerHTML = `
       <div class="countdown-unit"><span class="countdown-num">${pad(Math.floor(diff/86400000),3)}</span><span class="countdown-name">Jours</span></div>

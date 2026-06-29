@@ -1158,3 +1158,275 @@ ul { list-style: none; }
   .news-hero-slider { height:280px; }
   .topbar-links { display:none; }
 }
+
+/* ============================================================
+   NGONDO v6 — HEADER & MENU MOBILE REFONTE
+   Style inspiré papeaucameroun2026.cm
+   ============================================================ */
+
+/* ── RESET anciennes règles header qui peuvent conflictuer ── */
+.topbar { display:none; }
+.navbar { display:none; }
+.nav-menu { display:none !important; }
+.nav-actions { display:none; }
+.mega-menu { display:none !important; }
+.hamburger { display:none; }
+
+/* ── NOUVEAU HEADER ─────────────────────────────────────────── */
+.site-header {
+  position: sticky;
+  top: 0; left: 0; right: 0;
+  z-index: 500;
+  background: rgba(255,255,255,0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow 0.3s ease;
+}
+.site-header.scrolled { box-shadow: 0 2px 24px rgba(26,74,140,0.1); }
+
+.header-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* ── LOGO ───────────────────────────────────────────────────── */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.nav-logo img {
+  height: 46px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+.nav-logo-text { display: flex; flex-direction: column; line-height: 1.15; }
+.nav-logo-main {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--blue);
+  letter-spacing: 0.04em;
+}
+.nav-logo-sub {
+  font-family: var(--font-label);
+  font-size: 0.52rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+/* ── NAV DESKTOP ────────────────────────────────────────────── */
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  flex: 1;
+  justify-content: center;
+}
+.nav-desktop .nav-link {
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  padding: 0.45rem 0.8rem;
+  border-radius: 4px;
+  transition: color var(--t), background var(--t);
+  white-space: nowrap;
+  display: block;
+}
+.nav-desktop .nav-link:hover { color: var(--blue); background: var(--blue-light); }
+.nav-desktop .nav-link.active { color: var(--blue); }
+
+/* ── DROITE : LANG PILLS + CTA ──────────────────────────────── */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* Boutons FR / EN style papeaucameroun */
+.lang-pills {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1.5px solid var(--blue);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.lang-pill {
+  font-family: var(--font-label);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.7rem;
+  color: var(--blue);
+  background: transparent;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  display: block;
+  border-right: 1px solid var(--blue);
+}
+.lang-pill:last-child { border-right: none; }
+.lang-pill:hover { background: var(--blue-light); }
+.lang-pill.active {
+  background: var(--blue);
+  color: #fff;
+}
+
+.nav-cta {
+  padding: 0.5rem 1rem !important;
+  font-size: 0.68rem !important;
+}
+
+/* ── HAMBURGER ──────────────────────────────────────────────── */
+.hamburger-v6 {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  background: none;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  padding: 8px;
+  flex-shrink: 0;
+  transition: border-color var(--t);
+}
+.hamburger-v6:hover { border-color: var(--blue); }
+.hamburger-v6 span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--blue);
+  border-radius: 2px;
+  transition: all 0.28s ease;
+  transform-origin: center;
+}
+.hamburger-v6.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger-v6.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger-v6.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Réutiliser la classe hamburger du JS (id="hamburger") */
+#hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  background: none;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  padding: 9px;
+  flex-shrink: 0;
+  transition: border-color var(--t);
+}
+#hamburger:hover { border-color: var(--blue); }
+#hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--blue);
+  border-radius: 2px;
+  transition: all 0.28s ease;
+  transform-origin: center;
+}
+#hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+#hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+#hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── MENU MOBILE ────────────────────────────────────────────── */
+.mobile-menu {
+  display: none; /* caché par défaut */
+  position: fixed;
+  top: 70px; left: 0; right: 0; bottom: 0;
+  background: #fff;
+  z-index: 490;
+  flex-direction: column;
+  padding: 1.5rem clamp(1rem, 5vw, 2rem);
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  border-top: 3px solid var(--blue);
+}
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+.mobile-link {
+  display: flex;
+  align-items: center;
+  padding: 1.1rem 0;
+  font-family: var(--font-label);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  border-bottom: 1px solid var(--border-light);
+  transition: color var(--t), padding-left var(--t);
+}
+.mobile-link:hover { color: var(--blue); padding-left: 0.5rem; }
+.mobile-link:first-child { border-top: 1px solid var(--border-light); }
+
+.mobile-lang {
+  display: flex;
+  gap: 0;
+  margin-top: 1.75rem;
+  border: 1.5px solid var(--blue);
+  border-radius: 4px;
+  overflow: hidden;
+  width: fit-content;
+}
+.mobile-lang .lang-pill {
+  font-size: 0.85rem;
+  padding: 0.5rem 1.25rem;
+}
+
+.mobile-footer-links {
+  margin-top: 1.25rem;
+}
+.mobile-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-light);
+}
+.mobile-social a {
+  color: var(--text-3);
+  transition: color var(--t);
+}
+.mobile-social a:hover { color: var(--blue); }
+
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .nav-desktop { display: none; }
+  .nav-right .nav-cta { display: none; }
+  #hamburger { display: flex; }
+  .mobile-menu { display: flex; }
+  .header-inner { gap: 1rem; }
+  .nav-right { gap: 0.5rem; }
+}
+
+@media (max-width: 480px) {
+  .nav-logo-text { display: none; }
+  .header-inner { height: 62px; }
+  .mobile-menu { top: 62px; }
+  .nav-right .lang-pills { display: none; } /* lang visible dans menu mobile */
+}
