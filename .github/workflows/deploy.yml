@@ -3,7 +3,7 @@ name: Déploiement vers LWS cPanel
 on:
   push:
     branches:
-      - main  # Changez par "master" si votre branche principale s'appelle master
+      - main  # Changez par "master" si votre branche principale sur GitHub s'appelle master
 
 jobs:
   web-deploy:
@@ -19,4 +19,4 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        # server-dir: public_html/  # Désactivez le '#' au début si vous devez spécifier le dossier cible exact ici
+        server-dir: public_html/  # <-- Le code est correctement ajouté ici
