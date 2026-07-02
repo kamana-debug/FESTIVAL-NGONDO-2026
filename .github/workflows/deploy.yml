@@ -1,0 +1,22 @@
+name: Déploiement vers LWS cPanel
+
+on:
+  push:
+    branches:
+      - main  # Changez par "master" si votre branche principale s'appelle master
+
+jobs:
+  web-deploy:
+    name: 🚀 Déployer le site via FTP
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Récupérer le code du dépôt
+      uses: actions/checkout@v4
+      
+    - name: 📂 Synchroniser les fichiers via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        # server-dir: public_html/  # Désactivez le '#' au début si vous devez spécifier le dossier cible exact ici
