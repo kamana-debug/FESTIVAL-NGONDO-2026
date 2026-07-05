@@ -6,6 +6,26 @@ const NGONDO = {
   lang: document.documentElement.lang || 'fr',
   t(fr, en) { return this.lang === 'en' ? en : fr; },
 
+  /* ── Correspondance des pages FR ⇄ EN ─────────────────────── */
+  pageMap: {
+    index: 'index', apropos: 'about', accessibilite: 'accessibility', albums: 'albums',
+    artisanat: 'crafts', artistes: 'artists', ateliers: 'workshops', benevoles: 'volunteers',
+    billetterie: 'ticketing', biographies: 'biographies', cantons: 'cantons', concours: 'contest',
+    contact: 'contact', culture: 'culture', ecoresponsabilite: 'sustainability', editions: 'editions',
+    emploi: 'jobs', expositions: 'exhibitions', galerie: 'albums', musique: 'music',
+    palmares: 'hall-of-fame', partenaires: 'partners', pirogue: 'pirogue', presse: 'press',
+    programmation: 'programme', 'site-exterieur': 'outdoor-site', tradition: 'traditions'
+  },
+
+  /* Construit l'URL vers une page donnée (nom de fichier FR sans extension), dans la langue courante */
+  link(frName) {
+    const b = this.base();
+    if (this.lang === 'en' && this.pageMap[frName]) {
+      return `${b}pages/en/${this.pageMap[frName]}.html`;
+    }
+    return `${b}pages/fr/${frName}.html`;
+  },
+
   /* ── Chemins relatifs selon la profondeur ─────────────────── */
   base() {
     const p = window.location.pathname;
@@ -28,7 +48,7 @@ const NGONDO = {
         <div class="ngd-container">
 
           <!-- LOGO -->
-          <a href="${b}pages/fr/index.html" class="ngd-logo" aria-label="NGONDO 2026">
+          <a href="${this.link('index')}" class="ngd-logo" aria-label="NGONDO 2026">
             <img src="${b}images/logo-ngondo.png" alt="Logo NGONDO"
                  onerror="this.style.display='none'">
             <div>
@@ -39,13 +59,13 @@ const NGONDO = {
 
           <!-- NAV DESKTOP -->
           <nav class="ngd-nav" aria-label="Navigation principale" id="ngd-nav">
-            <a href="${b}pages/fr/index.html"       class="ngd-link">${this.t('Accueil','Home')}</a>
-            <a href="${b}pages/fr/programmation.html" class="ngd-link">${this.t('Programme','Programme')}</a>
-            <a href="${b}pages/fr/actualites.html"  class="ngd-link">${this.t('Actualités','News')}</a>
-            <a href="${b}pages/fr/galerie.html"     class="ngd-link">${this.t('Galerie','Gallery')}</a>
-            <a href="${b}pages/fr/cantons.html"     class="ngd-link">${this.t('Cantons','Cantons')}</a>
-            <a href="${b}pages/fr/rituels.html"     class="ngd-link">${this.t('Rituels','Rituals')}</a>
-            <a href="${b}pages/fr/presse.html"      class="ngd-link">${this.t('Presse','Press')}</a>
+            <a href="${this.link('index')}"         class="ngd-link">${this.t('Accueil','Home')}</a>
+            <a href="${this.link('programmation')}" class="ngd-link">${this.t('Programme','Programme')}</a>
+            <a href="${this.link('actualites')}"    class="ngd-link">${this.t('Actualités','News')}</a>
+            <a href="${this.link('galerie')}"       class="ngd-link">${this.t('Galerie','Gallery')}</a>
+            <a href="${this.link('cantons')}"       class="ngd-link">${this.t('Cantons','Cantons')}</a>
+            <a href="${this.link('rituels')}"       class="ngd-link">${this.t('Rituels','Rituals')}</a>
+            <a href="${this.link('presse')}"        class="ngd-link">${this.t('Presse','Press')}</a>
           </nav>
 
           <!-- DROITE -->
@@ -55,7 +75,7 @@ const NGONDO = {
               <a href="${frPath}" class="ngd-lang-pill ${lang==='fr'?'on':''}" lang="fr" hreflang="fr">FR</a>
               <a href="${enPath}" class="ngd-lang-pill ${lang==='en'?'on':''}" lang="en" hreflang="en">EN</a>
             </div>
-            <a href="${b}pages/fr/billetterie.html" class="ngd-cta">${this.t('Billets','Tickets')}</a>
+            <a href="${this.link('billetterie')}" class="ngd-cta">${this.t('Billets','Tickets')}</a>
           </div>
 
           <!-- BURGER -->
@@ -72,16 +92,16 @@ const NGONDO = {
       <div class="ngd-panel" id="ngd-panel" aria-hidden="true" role="dialog"
            aria-label="${this.t('Menu de navigation','Navigation menu')}">
         <nav aria-label="${this.t('Navigation mobile','Mobile navigation')}">
-          <a href="${b}pages/fr/index.html"         class="ngd-panel-link">${this.t('Accueil','Home')}</a>
-          <a href="${b}pages/fr/programmation.html" class="ngd-panel-link">${this.t('Programme 2026','Programme 2026')}</a>
-          <a href="${b}pages/fr/actualites.html"    class="ngd-panel-link">${this.t('Actualités','News')}</a>
-          <a href="${b}pages/fr/galerie.html"       class="ngd-panel-link">${this.t('Galerie Photos','Photo Gallery')}</a>
-          <a href="${b}pages/fr/cantons.html"       class="ngd-panel-link">${this.t('Les 12 Cantons Sawa','The 12 Sawa Cantons')}</a>
-          <a href="${b}pages/fr/rituels.html"       class="ngd-panel-link">${this.t('Rituels & Culture','Rituals & Culture')}</a>
-          <a href="${b}pages/fr/pirogue.html"       class="ngd-panel-link">${this.t('Course de Pirogues','Pirogue Race')}</a>
-          <a href="${b}pages/fr/miss-ngondo.html"   class="ngd-panel-link">${this.t('Miss NGONDO','Miss NGONDO')}</a>
-          <a href="${b}pages/fr/presse.html"        class="ngd-panel-link">${this.t('Presse','Press')}</a>
-          <a href="${b}pages/fr/contact.html"       class="ngd-panel-link">${this.t('Contact','Contact')}</a>
+          <a href="${this.link('index')}"         class="ngd-panel-link">${this.t('Accueil','Home')}</a>
+          <a href="${this.link('programmation')}" class="ngd-panel-link">${this.t('Programme 2026','Programme 2026')}</a>
+          <a href="${this.link('actualites')}"    class="ngd-panel-link">${this.t('Actualités','News')}</a>
+          <a href="${this.link('galerie')}"       class="ngd-panel-link">${this.t('Galerie Photos','Photo Gallery')}</a>
+          <a href="${this.link('cantons')}"       class="ngd-panel-link">${this.t('Les 13 Cantons Sawa','The 13 Sawa Cantons')}</a>
+          <a href="${this.link('rituels')}"       class="ngd-panel-link">${this.t('Rituels & Culture','Rituals & Culture')}</a>
+          <a href="${this.link('pirogue')}"       class="ngd-panel-link">${this.t('Course de Pirogues','Pirogue Race')}</a>
+          <a href="${this.link('miss-ngondo')}"   class="ngd-panel-link">${this.t('Miss NGONDO','Miss NGONDO')}</a>
+          <a href="${this.link('presse')}"        class="ngd-panel-link">${this.t('Presse','Press')}</a>
+          <a href="${this.link('contact')}"       class="ngd-panel-link">${this.t('Contact','Contact')}</a>
         </nav>
 
         <!-- Lang dans le panel -->
@@ -90,7 +110,7 @@ const NGONDO = {
           <a href="${enPath}" class="ngd-lang-pill ${lang==='en'?'on':''}" lang="en">EN</a>
         </div>
 
-        <a href="${b}pages/fr/billetterie.html" class="ngd-panel-cta">${this.t('Billets & Accès','Tickets & Access')}</a>
+        <a href="${this.link('billetterie')}" class="ngd-panel-cta">${this.t('Billets & Accès','Tickets & Access')}</a>
 
         <div class="ngd-panel-social">
           <a href="https://facebook.com/ngondo" target="_blank" rel="noopener" aria-label="Facebook">
@@ -157,22 +177,22 @@ const NGONDO = {
             </div>
           </div>
           <div class="footer-col"><h4>${this.t('NGONDO 2026','NGONDO 2026')}</h4><ul>
-            <li><a href="${b}pages/fr/programmation.html">${this.t('Programme','Programme')}</a></li>
-            <li><a href="${b}pages/fr/billetterie.html">${this.t('Billetterie','Ticketing')}</a></li>
-            <li><a href="${b}pages/fr/cantons.html">${this.t('Les 12 Cantons','12 Cantons')}</a></li>
-            <li><a href="${b}pages/fr/galerie.html">${this.t('Galerie','Gallery')}</a></li>
-            <li><a href="${b}pages/fr/actualites.html">${this.t('Actualités','News')}</a></li>
+            <li><a href="${this.link('programmation')}">${this.t('Programme','Programme')}</a></li>
+            <li><a href="${this.link('billetterie')}">${this.t('Billetterie','Ticketing')}</a></li>
+            <li><a href="${this.link('cantons')}">${this.t('Les 13 Cantons','13 Cantons')}</a></li>
+            <li><a href="${this.link('galerie')}">${this.t('Galerie','Gallery')}</a></li>
+            <li><a href="${this.link('actualites')}">${this.t('Actualités','News')}</a></li>
           </ul></div>
           <div class="footer-col"><h4>${this.t('Culture Sawa','Sawa Culture')}</h4><ul>
-            <li><a href="${b}pages/fr/rituels.html">${this.t('Rituels sacrés','Sacred Rituals')}</a></li>
-            <li><a href="${b}pages/fr/pirogue.html">${this.t('Course de pirogues','Pirogue Race')}</a></li>
-            <li><a href="${b}pages/fr/miss-ngondo.html">Miss NGONDO</a></li>
-            <li><a href="${b}pages/fr/apropos.html">${this.t('À propos','About')}</a></li>
+            <li><a href="${this.link('rituels')}">${this.t('Rituels sacrés','Sacred Rituals')}</a></li>
+            <li><a href="${this.link('pirogue')}">${this.t('Course de pirogues','Pirogue Race')}</a></li>
+            <li><a href="${this.link('miss-ngondo')}">Miss NGONDO</a></li>
+            <li><a href="${this.link('apropos')}">${this.t('À propos','About')}</a></li>
           </ul></div>
           <div class="footer-col"><h4>${this.t('Informations','Information')}</h4><ul>
-            <li><a href="${b}pages/fr/presse.html">${this.t('Salle de presse','Press Room')}</a></li>
-            <li><a href="${b}pages/fr/partenaires.html">${this.t('Partenaires','Partners')}</a></li>
-            <li><a href="${b}pages/fr/contact.html">Contact</a></li>
+            <li><a href="${this.link('presse')}">${this.t('Salle de presse','Press Room')}</a></li>
+            <li><a href="${this.link('partenaires')}">${this.t('Partenaires','Partners')}</a></li>
+            <li><a href="${this.link('contact')}">Contact</a></li>
           </ul></div>
         </div>
       </div>
