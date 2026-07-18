@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News | NGONDO 2026</title>
+  <meta name="description" content="All the latest news from NGONDO 2026 — caravans, videos, articles and press releases.">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml">
+  <style>
+    /* Responsive video embed */
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #000;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+    /* Non-embed Facebook link */
+    .fb-video-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: #1877f2;
+      color: #fff;
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .fb-video-link:hover { background: #1557b0; color: #fff; }
+    .fb-video-link svg { flex-shrink: 0; }
+    .fb-video-link div strong { display: block; font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .fb-video-link div span { font-size: 0.78rem; opacity: 0.85; }
+    /* Video articles */
+    .video-articles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.75rem; margin-top: 2rem; }
+    .video-article { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-card); overflow: hidden; }
+    .video-article-media { background: #000; }
+    .video-article-body { padding: 1.25rem; }
+    .video-article-cat { font-family: var(--font-label); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
+    .video-article-title { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text); line-height: 1.3; margin-bottom: 0.5rem; }
+    .video-article-desc { font-size: 0.83rem; color: var(--text-2); line-height: 1.65; }
+    .video-article-date { font-family: var(--font-label); font-size: 0.62rem; color: var(--text-3); margin-top: 0.75rem; }
+    @media (max-width: 640px) {
+      .video-articles { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div id="site-header"></div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>›</span><span>News</span>
+    </nav>
+    <span class="section-label">Latest News</span>
+    <h1 class="section-title">NGONDO 2026 News</h1>
+    <div class="divider"></div>
+    <p style="color:rgba(255,255,255,0.7);max-width:560px;font-size:0.93rem;">Follow the cultural caravans, official videos and all NGONDO 2026 updates live.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- FEATURED ARTICLE -->
+    <div class="reveal" style="margin-bottom:3rem;">
+      <span class="section-label">Featured</span>
+      <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:0;border-radius:var(--radius-card);overflow:hidden;border:1px solid var(--border);box-shadow:0 4px 20px rgba(26,74,140,0.08);" class="featured-news-grid">
+        <div style="position:relative;min-height:340px;overflow:hidden;">
+          <img src="../../images/LTM_RENCONTRE_NGONDO_ET_FNE_1.jpeg" alt="NGONDO FNE meeting"
+               style="width:100%;height:100%;object-fit:cover;" loading="lazy"
+               onerror="this.src='../../images/foule-wouri.jpg'">
+          <div style="position:absolute;top:1rem;left:1rem;background:var(--gold);color:#fff;font-family:var(--font-label);font-size:0.58rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.25rem 0.7rem;border-radius:3px;">Featured</div>
+        </div>
+        <div style="background:#fff;padding:2.25rem;display:flex;flex-direction:column;justify-content:center;gap:0.7rem;">
+          <div style="font-family:var(--font-label);font-size:0.62rem;color:var(--text-3);">24 June 2026 · Sawa Palace of Culture</div>
+          <h2 style="font-family:var(--font-display);font-size:1.4rem;font-weight:900;color:var(--text);line-height:1.2;">Tradition and coexistence: the NGONDO welcomes the Chief of Nkokoé Canton</h2>
+          <div class="divider"></div>
+          <p style="font-size:0.87rem;color:var(--text-2);line-height:1.75;">The Sawa Palace of Culture hosted a fraternal meeting between the NGONDO and His Majesty Camille Moute à Bidias, Superior Chief of Nkokoé Canton in the Mbam. The visit reaffirmed the conviction that tradition can strengthen coexistence in Cameroon.</p>
+          <a href="#" class="btn btn-gold" style="align-self:flex-start;margin-top:0.5rem;">Read the article</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ VIDEOS ══ -->
+    <div class="reveal">
+      <span class="section-label">Official Videos</span>
+      <h2 class="section-title">The NGONDO in Video</h2>
+      <div class="divider"></div>
+      <p style="color:var(--text-2);font-size:0.93rem;max-width:560px;">Relive the highlights of NGONDO 2026 — cultural caravans, the President's addresses and reports from the Sawa cantons.</p>
+    </div>
+
+    <div class="video-articles reveal">
+
+      <!-- Video 1: YouTube kGCLTksP4DI -->
+      <article class="video-article">
+        <div class="video-article-media">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/kGCLTksP4DI"
+              title="NGONDO 2026 — Wouri Bwélé Caravan"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+        <div class="video-article-body">
+          <div class="video-article-cat">2026 Caravan</div>
+          <h3 class="video-article-title">NGONDO 2026: Caravan in Wouri Bwélé Canton</h3>
+          <p class="video-article-desc">Full report on the NGONDO's stop in Wouri Bwélé Canton — a river arrival, traditional wrestling, the Miss parade and an address by President H.M. Gaston Mbodi Épée on the theme of Anticipation and Vigilance.</p>
+          <div class="video-article-date">28 June 2026 · Wouri Bwélé Canton</div>
+        </div>
+      </article>
+
+      <!-- Video 2: YouTube bnUNr1bthf0 -->
+      <article class="video-article">
+        <div class="video-article-media">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/bnUNr1bthf0"
+              title="NGONDO — Sawa Tradition and Culture"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+        <div class="video-article-body">
+          <div class="video-article-cat">Sawa Culture</div>
+          <h3 class="video-article-title">The NGONDO: traditions and rituals of the Sawa people</h3>
+          <p class="video-article-desc">Discover the ancestral rituals of the NGONDO — the Cult of the Water Oracles, the raising of the sacred vase from the Wouri, the Esséwè and Bolobo dances. A journey into the heart of humanity's intangible heritage.</p>
+          <div class="video-article-date">NGONDO — UNESCO Heritage</div>
+        </div>
+      </article>
+
+      <!-- Video 3: YouTube f7CnEMeYc8I -->
+      <article class="video-article">
+        <div class="video-article-media">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/f7CnEMeYc8I?si=-5ikC-X9aKLMIasQ"
+              title="NGONDO — Pirogue Race"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+        <div class="video-article-body">
+          <div class="video-article-cat">Pirogue Race</div>
+          <h3 class="video-article-title">The Grand NGONDO Pirogue Race</h3>
+          <p class="video-article-desc">The most spectacular event of the NGONDO — giant pirogues paddled by dozens of rowers on the Wouri River to the rhythm of the drums. Every Sawa canton defends its colours in this ancestral competition.</p>
+          <div class="video-article-date">NGONDO — Apotheosis on the Wouri</div>
+        </div>
+      </article>
+
+      <!-- Video 4: Facebook -->
+      <article class="video-article">
+        <div class="video-article-media" style="padding:1.25rem;background:#f0f2f5;">
+          <a href="https://www.facebook.com/share/v/1S6zLMo85J/?mibextid=wwXIfr"
+             target="_blank" rel="noopener"
+             class="fb-video-link">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            <div>
+              <strong>Watch the video on Facebook</strong>
+              <span>Click to watch on Facebook</span>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" style="margin-left:auto;flex-shrink:0"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+          <!-- Descriptive thumbnail -->
+          <div style="margin-top:0.75rem;display:flex;align-items:center;gap:0.6rem;background:#fff;border-radius:6px;padding:0.75rem;">
+            <img src="../../images/foule-wouri.jpg" alt="NGONDO Wouri Bwélé"
+                 style="width:60px;height:60px;object-fit:cover;border-radius:4px;flex-shrink:0;">
+            <div>
+              <div style="font-family:var(--font-label);font-size:0.6rem;font-weight:700;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;">Caravan</div>
+              <div style="font-size:0.82rem;font-weight:600;color:var(--text);line-height:1.3;">NGONDO O WOURI-BWELE — Bwelí njâ Ivíyέ</div>
+              <div style="font-size:0.72rem;color:var(--text-3);margin-top:0.2rem;">Official video · 28 June 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="video-article-body">
+          <div class="video-article-cat">Social Media</div>
+          <h3 class="video-article-title">NGONDO O WOURI-BWELE — Bwelí njâ Ivíyέ</h3>
+          <p class="video-article-desc">As dawn on Sunday 28 June 2026 stretches its first golden rays, it will be exactly 9:00 AM — the hour when the waters whisper the secrets of the ancestors. Sawa land will resonate at Bonjó — #EPENE #WouriBweleCanton #NGONDO2026</p>
+          <div class="video-article-date">28 June 2026 · Wouri Bwélé Canton</div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- FILTERS + TEXT ARTICLES -->
+    <div class="reveal" style="margin-top:4rem;">
+      <span class="section-label">Articles</span>
+      <h2 class="section-title">All News</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="caravane">Caravans</button>
+      <button class="filter-btn" data-filter="culture">Culture</button>
+      <button class="filter-btn" data-filter="diplomatie">Diplomacy</button>
+      <button class="filter-btn" data-filter="organisation">Organisation</button>
+    </div>
+
+    <div class="news-grid reveal">
+
+      <article class="news-card" data-cat="diplomatie">
+        <div class="news-card-img">
+          <img src="../../images/LTM_RENCONTRE_NGONDO_ET_FNE_2.jpeg" alt="NGONDO FNE agreement" loading="lazy"
+               onerror="this.src='../../images/foule-wouri.jpg'">
+          <span class="news-card-cat">Diplomacy</span>
+        </div>
+        <div class="news-card-body">
+          <div class="news-card-date">24 June 2026</div>
+          <h3 class="news-card-title">The NGONDO and the FNE sign a partnership agreement</h3>
+          <p class="news-card-excerpt">The National Employment Fund and the NGONDO have signed an agreement aimed at guiding young Sawa people toward employment and entrepreneurship during the 2026 cultural caravans.</p>
+          <a href="#" class="news-card-link">Read <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="news-card" data-cat="caravane">
+        <div class="news-card-img">
+          <img src="../../images/foule-wouri.jpg" alt="Wouri Bwélé Caravan" loading="lazy">
+          <span class="news-card-cat">Caravan</span>
+        </div>
+        <div class="news-card-body">
+          <div class="news-card-date">28 June 2026</div>
+          <h3 class="news-card-title">Wouri Bwélé Canton: a return to the roots by the river</h3>
+          <p class="news-card-excerpt">The NGONDO caravan made a memorable stop in Wouri Bwélé Canton. Traditional wrestling, the Miss parade, tug-of-war — heritage fervour was in full swing.</p>
+          <a href="#" class="news-card-link">Read <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="news-card" data-cat="organisation">
+        <div class="news-card-img">
+          <img src="../../images/ceremonie-jengu.jpg" alt="NGONDO 2026 theme" loading="lazy">
+          <span class="news-card-cat">NGONDO 2026</span>
+        </div>
+        <div class="news-card-body">
+          <div class="news-card-date">January 2026</div>
+          <h3 class="news-card-title">Official 2026 theme: Anticipation and Vigilance</h3>
+          <p class="news-card-excerpt">President H.M. Gaston Mbodi Épée calls on the Sawa community to build collective awareness, preserve their cultural heritage and strengthen unity.</p>
+          <a href="#" class="news-card-link">Read <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="news-card" data-cat="culture">
+        <div class="news-card-img">
+          <img src="../../images/pirogues-wouri.jpg" alt="NGONDO UNESCO" loading="lazy">
+          <span class="news-card-cat">Heritage</span>
+        </div>
+        <div class="news-card-body">
+          <div class="news-card-date">December 2025</div>
+          <h3 class="news-card-title">Kalat'a NGONDO 2025: the magazine celebrates UNESCO inscription</h3>
+          <p class="news-card-excerpt">The official NGONDO magazine devotes its December 2025 issue to the Ngondo's inscription on the Intangible Cultural Heritage of Humanity list.</p>
+          <a href="#" class="news-card-link">Read <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="news-card" data-cat="organisation">
+        <div class="news-card-img">
+          <img src="../../images/LTM_RENCONTRE_NGONDO_ET_FNE_5.jpeg" alt="Sawa Palace of Culture" loading="lazy"
+               onerror="this.src='../../images/foule-wouri.jpg'">
+          <span class="news-card-cat">Headquarters</span>
+        </div>
+        <div class="news-card-body">
+          <div class="news-card-date">14 December 2024</div>
+          <h3 class="news-card-title">Inauguration of the Sawa Palace of Culture — the NGONDO's new headquarters</h3>
+          <p class="news-card-excerpt">The NGONDO takes up its new headquarters at the Sawa Palace of Culture, inaugurated under the patronage of the President of the Republic on 14 December 2024.</p>
+          <a href="#" class="news-card-link">Read <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="news-card" data-cat="culture">
+        <div class="news-card-img">
+          <img src="../../images/danses-traditionnelles.jpg" alt="Mangando dances" loading="lazy">
+          <span class="news-card-cat">Culture</span>
+        </div>
+        <div class="news-card-body">
+          <div class="news-card-date">December 2024</div>
+          <h3 class="news-card-title">The Mangando and the NGONDO Carnival: two major innovations</h3>
+          <p class="news-card-excerpt">The 2024 edition introduced two new attractions — the NGONDO Carnival (a parade through the streets of Douala) and the Mangando, a professional dance troupe.</p>
+          <a href="#" class="news-card-link">Read <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- PRESS DOCUMENTS -->
+    <div class="reveal" style="margin-top:3.5rem;">
+      <span class="section-label">Press Room</span>
+      <h2 class="section-title">Official Documents</h2>
+      <div class="divider"></div>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;margin-top:1.5rem;">
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius-card);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1.25rem;">
+          <div style="width:40px;height:40px;background:var(--blue-light);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">📄</div>
+          <div style="flex:1;">
+            <div style="font-family:var(--font-display);font-size:0.95rem;font-weight:700;color:var(--text);">Official NGONDO 2026 Programme</div>
+            <div style="font-family:var(--font-label);font-size:0.65rem;color:var(--text-3);margin-top:0.2rem;">PDF · June 2026</div>
+          </div>
+          <a href="#" class="btn btn-outline" style="font-size:0.67rem;padding:0.45rem 0.9rem;flex-shrink:0;">Download</a>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius-card);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1.25rem;">
+          <div style="width:40px;height:40px;background:var(--gold-bg);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">📰</div>
+          <div style="flex:1;">
+            <div style="font-family:var(--font-display);font-size:0.95rem;font-weight:700;color:var(--text);">Kalat'a NGONDO Magazine 2025</div>
+            <div style="font-family:var(--font-label);font-size:0.65rem;color:var(--text-3);margin-top:0.2rem;">PDF · December 2025 · UNESCO Special</div>
+          </div>
+          <a href="#" class="btn btn-outline" style="font-size:0.67rem;padding:0.45rem 0.9rem;flex-shrink:0;">Download</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    const f = this.dataset.filter;
+    document.querySelectorAll('.news-card').forEach(c => {
+      c.style.display = (f === 'all' || c.dataset.cat === f) ? '' : 'none';
+    });
+  });
+});
+</script>
+
+<style>
+@media (max-width: 640px) {
+  .featured-news-grid { grid-template-columns: 1fr !important; }
+  .featured-news-grid > div:first-child { min-height: 200px !important; }
+}
+</style>
+
+<script>document.documentElement.lang = 'en';</script>
+<script src="../../js/components.js"></script>
+<script src="../../js/main.js"></script>
+</body>
+</html>

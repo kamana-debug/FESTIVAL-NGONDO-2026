@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | NGONDO</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>Contact</span></nav>
+    <span class="section-label">Get in Touch</span>
+    <h1 class="section-title">Contact & Information</h1>
+    <div class="divider"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;">
+
+      <div class="reveal">
+        <span class="section-label">Contact Details</span>
+        <h2 style="font-family:var(--font-display);font-size:1.6rem;font-weight:700;margin:0.5rem 0 1.5rem;">Ngondo Secretariat</h2>
+
+        <div style="display:flex;flex-direction:column;gap:1.5rem;">
+          <div style="display:flex;gap:1rem;align-items:flex-start;">
+            <span style="font-size:1.5rem;flex-shrink:0;">📍</span>
+            <div>
+              <strong style="font-family:var(--font-label);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-gold);display:block;margin-bottom:0.25rem;">Address</strong>
+              <p style="color:var(--color-muted);font-size:0.9rem;">Permanent Committee of the Ngondo<br>PO Box 4XXX, Douala — Cameroon<br>Bonanjo District</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:1rem;align-items:flex-start;">
+            <span style="font-size:1.5rem;flex-shrink:0;">📞</span>
+            <div>
+              <strong style="font-family:var(--font-label);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-gold);display:block;margin-bottom:0.25rem;">Phone</strong>
+              <p style="color:var(--color-muted);font-size:0.9rem;">+237 6XX XXX XXX<br>+237 2XX XXX XXX</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:1rem;align-items:flex-start;">
+            <span style="font-size:1.5rem;flex-shrink:0;">✉️</span>
+            <div>
+              <strong style="font-family:var(--font-label);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-gold);display:block;margin-bottom:0.25rem;">Email</strong>
+              <p style="color:var(--color-muted);font-size:0.9rem;">
+                info@festivalngondo.cm<br>
+                press@festivalngondo.cm<br>
+                tickets@festivalngondo.cm
+              </p>
+            </div>
+          </div>
+          <div style="display:flex;gap:1rem;align-items:flex-start;">
+            <span style="font-size:1.5rem;flex-shrink:0;">🗺️</span>
+            <div>
+              <strong style="font-family:var(--font-label);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-gold);display:block;margin-bottom:0.25rem;">NGONDO Site</strong>
+              <p style="color:var(--color-muted);font-size:0.9rem;">Wouri Esplanade, Douala<br>Access via Joss Street and Boulevard de la Liberté</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="reveal">
+        <span class="section-label">Contact Form</span>
+        <h2 style="font-family:var(--font-display);font-size:1.6rem;font-weight:700;margin:0.5rem 0 1.5rem;">Send a Message</h2>
+
+        <form action="#" method="post" novalidate style="display:flex;flex-direction:column;gap:1rem;">
+          <div>
+            <label for="name" style="font-family:var(--font-label);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-muted);display:block;margin-bottom:0.4rem;">Full Name *</label>
+            <input type="text" id="name" name="name" required style="width:100%;background:var(--color-card);border:1px solid var(--color-border);border-radius:var(--radius);padding:0.8rem 1rem;color:var(--color-text);font-family:var(--font-body);font-size:0.9rem;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--color-gold)'" onblur="this.style.borderColor='var(--color-border)'">
+          </div>
+          <div>
+            <label for="email" style="font-family:var(--font-label);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-muted);display:block;margin-bottom:0.4rem;">Email *</label>
+            <input type="email" id="email" name="email" required style="width:100%;background:var(--color-card);border:1px solid var(--color-border);border-radius:var(--radius);padding:0.8rem 1rem;color:var(--color-text);font-family:var(--font-body);font-size:0.9rem;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--color-gold)'" onblur="this.style.borderColor='var(--color-border)'">
+          </div>
+          <div>
+            <label for="subject" style="font-family:var(--font-label);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-muted);display:block;margin-bottom:0.4rem;">Subject</label>
+            <select id="subject" name="subject" style="width:100%;background:var(--color-card);border:1px solid var(--color-border);border-radius:var(--radius);padding:0.8rem 1rem;color:var(--color-text);font-family:var(--font-body);font-size:0.9rem;outline:none;">
+              <option>General Inquiries</option>
+              <option>Ticketing</option>
+              <option>Partnerships</option>
+              <option>Press & Media</option>
+              <option>Volunteering</option>
+              <option>Artists & Programme</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="message" style="font-family:var(--font-label);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-muted);display:block;margin-bottom:0.4rem;">Message *</label>
+            <textarea id="message" name="message" rows="5" required style="width:100%;background:var(--color-card);border:1px solid var(--color-border);border-radius:var(--radius);padding:0.8rem 1rem;color:var(--color-text);font-family:var(--font-body);font-size:0.9rem;outline:none;resize:vertical;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--color-gold)'" onblur="this.style.borderColor='var(--color-border)'"></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script>document.documentElement.lang = 'en';</script>
+<script src="../../js/components.js"></script>
+<script src="../../js/main.js"></script>
+</body>
+</html>
